@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Data.Domain.Dto;
 using Data.Domain.Dto.Weather;
 using Data.Domain.Entity;
 using System;
@@ -15,6 +16,9 @@ namespace Data.Domain.Mapping
         {
             CreateMap<Weather, WeatherAddDto>();
             CreateMap<Weather, WeatherAddDto>().ReverseMap();
+            
+            CreateMap<Instrument, InstrumentDto>();
+            CreateMap<Instrument, InstrumentDto>().ReverseMap();
         }
     }
 }
