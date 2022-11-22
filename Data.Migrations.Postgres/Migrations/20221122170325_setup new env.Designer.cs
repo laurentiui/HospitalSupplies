@@ -9,8 +9,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Data.Migrations.Postgres.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210307220957_personal-key")]
-    partial class personalkey
+    [Migration("20221122170325_setup new env")]
+    partial class setupnewenv
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,43 +20,29 @@ namespace Data.Migrations.Postgres.Migrations
                 .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-            modelBuilder.Entity("Data.Domain.Entity.User", b =>
+            modelBuilder.Entity("Data.Domain.Entity.Instrument", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Color")
                         .HasColumnType("text");
 
-                    b.Property<bool>("IsAllowed")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Username")
+                    b.Property<string>("Name")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Instruments");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            IsAllowed = true,
-                            Password = "21232F297A57A5A743894A0E4A801FC3",
-                            Username = "admin"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            IsAllowed = true,
-                            Password = "1",
-                            Username = "userJustForTest-to-ensure-you-check-the-db"
+                            Color = "Red",
+                            Name = "RAGNELL STILLE  SUPERCUT BLEPHAROPLASTY SCISSORS"
                         });
                 });
 #pragma warning restore 612, 618

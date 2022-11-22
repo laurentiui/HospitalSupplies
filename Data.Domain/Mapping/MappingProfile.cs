@@ -15,9 +15,6 @@ namespace Data.Domain.Mapping
         {
             CreateMap<Weather, WeatherAddDto>();
             CreateMap<Weather, WeatherAddDto>().ReverseMap();
-
-            CreateMap<Weather, WeatherDto>();
-            CreateMap<Weather, WeatherDto>().ReverseMap();
         }
     }
 }
