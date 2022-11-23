@@ -40,10 +40,15 @@ namespace Tests.UnitTests.Mocks
             return await Task.Run(() =>
             {
                 var toUpdate = _list.FirstOrDefault(l => l.Id == entity.Id);
-                _list.Remove(toUpdate);
-                _list.Add(entity);
 
-                return entity;
+                if (toUpdate != null) {
+                    _list.Remove(toUpdate);
+                    _list.Add(entity);
+
+                    return entity;
+                }
+
+                return null;
             });
         }
         public async Task Delete(T entity)
