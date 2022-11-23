@@ -1,15 +1,9 @@
 ﻿using Data.Domain.Entity;
-using Data.Repository.Implementations;
 using NUnit.Framework;
 using Services.Implementations;
 using Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Tests.UnitTests.Mocks;
-using Tests.UnitTests.TestUtilities;
 
 namespace Tests.UnitTests {
     public class InstrumentsServiceTest {

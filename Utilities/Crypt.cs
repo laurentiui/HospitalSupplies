@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
-namespace Utilities
-{
+namespace Utilities {
     public class Crypt
     {
         //https://stackoverflow.com/questions/11454004/calculate-a-md5-hash-from-a-string

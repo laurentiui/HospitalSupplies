@@ -1,14 +1,8 @@
 ﻿using Data.Domain.Dto;
 using Data.Domain.Entity;
-using Data.Repository;
-using Data.Repository.Implementations;
 using Data.Repository.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using Services.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Services.Implementations {

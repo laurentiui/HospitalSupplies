@@ -1,21 +1,11 @@
 ﻿using AutoMapper;
 using Data.Domain.Dto;
-using Data.Domain.Dto.User;
-using Data.Domain.Dto.Weather;
 using Data.Domain.Entity;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Tokens;
-using Services.Implementations;
 using Services.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-using System.Security.Claims;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace WebApi.Controllers {

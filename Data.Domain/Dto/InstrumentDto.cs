@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Data.Domain.Dto {
+﻿namespace Data.Domain.Dto {
     public class InstrumentDto {
         public int Id { get; set; }
         public string Name { get; set; }
