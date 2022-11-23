@@ -78,6 +78,32 @@ namespace WebApi.Controllers {
         }
 
         /// <summary>
+        /// Lists all instruments
+        /// </summary>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     here we add extra documention we want to see in swagger
+        ///
+        /// </remarks>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [HttpGet("search")]
+        public async Task<ActionResult<IList<InstrumentDto>>> Search([FromBody] InstrumentFilterDto instrumentFilterDto) {
+
+            //normalize search
+            instrumentFilterDto.FreeText = instrumentFilterDto?.FreeText?.ToLower();
+            instrumentFilterDto.NameContains = instrumentFilterDto?.NameContains?.ToLower();
+            instrumentFilterDto.ColorContains = instrumentFilterDto?.ColorContains?.ToLower();
+
+            var instruments = await _instrumentsService.Search(instrumentFilterDto);
+
+            var listDtos = instruments.Select(i => _mapper.Map<InstrumentDto>(i));
+
+            return Ok(listDtos);
+        }
+
+        /// <summary>
         /// Adds instrument
         /// </summary>
         /// /// <remarks>

@@ -1,4 +1,5 @@
-﻿using Data.Domain.Entity;
+﻿using Data.Domain.Dto;
+using Data.Domain.Entity;
 using Data.Repository;
 using Data.Repository.Implementations;
 using Data.Repository.Interfaces;
@@ -40,6 +41,11 @@ namespace Services.Implementations {
         public async Task Delete(int id) {
             var instrument = await GetById(id);
             await _instrumentRepository.Delete(instrument);
+        }
+
+        public async Task<IList<Instrument>> Search(InstrumentFilterDto filterDto) {
+            var instruments = await _instrumentRepository.Search(filterDto);
+            return instruments;
         }
     }
 }

@@ -13,5 +13,6 @@ namespace Services.Interfaces {
         Task<IList<Instrument>> ListAll ();
         Task<Instrument> GetById(int entityId);
         Task Delete (int id);
+        Task<IList<Instrument>> Search(InstrumentFilterDto filterDto);
     }
 }
