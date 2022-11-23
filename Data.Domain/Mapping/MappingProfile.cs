@@ -19,6 +19,9 @@ namespace Data.Domain.Mapping
             
             CreateMap<Instrument, InstrumentDto>();
             CreateMap<Instrument, InstrumentDto>().ReverseMap();
+
+            CreateMap<Instrument, InstrumentAddDto>();
+            CreateMap<Instrument, InstrumentAddDto>().ReverseMap();
         }
     }
 }
